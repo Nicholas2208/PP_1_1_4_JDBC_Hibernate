@@ -20,10 +20,13 @@ public class Main {
         userService.saveUser(john.getName(), john.getLastName(), john.getAge());
         User joanne = new User("Joanne", "Smith", (byte) 35);
         userService.saveUser(joanne.getName(), joanne.getLastName(), joanne.getAge());
-        User tomas = new User("Tomas", "Graham", (byte) 21);
-        userService.saveUser(tomas.getName(), tomas.getLastName(), tomas.getAge());
+        User thomas = new User("Thomas", "Graham", (byte) 21);
+        userService.saveUser(thomas.getName(), thomas.getLastName(), thomas.getAge());
         User david = new User("David", "Todd", (byte) 16);
         userService.saveUser(david.getName(), david.getLastName(), david.getAge());
+        System.out.println("\n\n");
+
+        //userService.removeUserById(3);
 
         List<User> allUsers = userService.getAllUsers();
         for (User user : allUsers) {
