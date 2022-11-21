@@ -16,25 +16,20 @@ public class Main {
 
         userService.createUsersTable();
 
-        User john = new User("John", "Doe", (byte) 40);
-        userService.saveUser(john.getName(), john.getLastName(), john.getAge());
-        User joanne = new User("Joanne", "Smith", (byte) 35);
-        userService.saveUser(joanne.getName(), joanne.getLastName(), joanne.getAge());
-        User thomas = new User("Thomas", "Graham", (byte) 21);
-        userService.saveUser(thomas.getName(), thomas.getLastName(), thomas.getAge());
-        User david = new User("David", "Todd", (byte) 16);
-        userService.saveUser(david.getName(), david.getLastName(), david.getAge());
-        System.out.println("\n\n");
+        userService.saveUser("Nicholas", "White", (byte) 48);
+        userService.saveUser("Helen", "Petrovsky", (byte) 52);
+        userService.saveUser("Joe", "Black", (byte) 30);
+        userService.saveUser("Arthur", "Peck", (byte) 35);
 
         //userService.removeUserById(3);
 
         List<User> allUsers = userService.getAllUsers();
+
         for (User user : allUsers) {
             System.out.println(user);
         }
 
         userService.cleanUsersTable();
-
         userService.dropUsersTable();
     }
 }
